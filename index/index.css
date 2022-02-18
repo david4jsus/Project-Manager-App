@@ -1,0 +1,27 @@
+/* START SCREEN COMPONENT */
+
+.start_screen
+{
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   margin: 0;
+}
+
+.start_screen_top_bar
+{
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 10%;
+   max-height: 10%;
+   background-color: aliceblue;
+   overflow: hidden;
+}
+
+.start_screen_content
+{
+   height: 90%;
+   max-height: 90%;
+}
