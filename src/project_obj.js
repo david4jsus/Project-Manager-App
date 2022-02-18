@@ -31,7 +31,7 @@ ProjectObj.prototype.setName = function (newName)
 // Get whether this project has any items
 ProjectObj.prototype.isEmpty = function()
 {
-   return this.items.length === 0;
+   return this.items.length <= 0;
 }
 
 // Get the list of items
@@ -54,7 +54,7 @@ ProjectObj.prototype.addItem = function (newItemID)
 ProjectObj.prototype.containsItem = function (itemID)
 {
    // Make sure the ID is valid
-   if (itemID >= 0)
+   if (itemID < 0)
    {
       return false;
    }
@@ -67,7 +67,7 @@ ProjectObj.prototype.containsItem = function (itemID)
 ProjectObj.prototype.removeItem = function (itemID)
 {
    // Make sure the ID is valid
-   if (itemID >= 0)
+   if (itemID < 0)
    {
       return;
    }
@@ -81,3 +81,6 @@ ProjectObj.prototype.removeItem = function (itemID)
       this.items.splice(itemIndex, 1);
    }
 }
+
+// Export the module
+module.exports.ProjectObj = ProjectObj;

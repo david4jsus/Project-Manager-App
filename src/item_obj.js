@@ -52,3 +52,6 @@ ItemObj.prototype.setType = function (newType)
 {
    this.type = newType;
 }
+
+// Export the module
+module.exports.ItemObj = ItemObj;
